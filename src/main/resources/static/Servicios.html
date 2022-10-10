@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        .menu{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #252839;
+        }
+        ul{
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        ul li a{
+            position: relative;
+            font-size: 2em;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+        }
+        ul li a::before{
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid  var(--clr);
+            -webkit-text-stroke: 1px  var(clr);
+        }
+        ul li a:hover::before{
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(clr));
+        }
+        #barralateral{
+    position:absolute;
+    top:12%;
+    left:0;
+    height: 81%;
+    width: 20%;
+    padding: 10px;
+}
+.contenido{
+     position:absolute;
+    top:12%;
+    left:20%;
+    height: 81%;
+    width:80%;
+    padding: 10px;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+   
+}
+.Imagenes{
+    padding: 40px;
+   
+}
+    </style>
+    <body>
+        <div>
+            <aside id="barralateral">
+                <nav class="menu">
+                    <ul>
+                        <li style="--clr:#00ade1">
+                            <a href="Index.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+                        </li>
+                        <li style="--clr:#ff6493">
+                            <a href="Perfil.html" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a>
+                        </li>
+                        <li style="--clr:#ffdd1c">
+                            <a href="Servicios.html" data-text="&nbsp;Servicios">&nbsp;Servicios&nbsp;</a>
+                        </li>
+                        <li style="--clr:#00dc82">
+                            <a href="Equipo.html" data-text="&nbsp;Equipo">&nbsp;Equipo&nbsp;</a>
+                        </li>
+                        <li style="--clr:#dc00d4">
+                            <a href="Contacto.html" data-text="&nbsp;Contacto">&nbsp;Contacto&nbsp;</a>
+                        </li>
+                        <li style="--clr:#07FFD9">
+                            <a href="Formulario.html" data-text="&nbsp;Formulario">&nbsp;Formulario&nbsp;</a>
+                        </li>
+                        <li style="--clr:#4040FF">
+                            <a href="Videos.html" data-text="&nbsp;Videos">&nbsp;Videos&nbsp;</a>
+                        </li>
+                        <li style="--clr:#FF32E3">
+                            <a href="Blog.html" data-text="&nbsp;Blog">&nbsp;Blog&nbsp;</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </aside>
+
+        </div>
+        <div class="contenido">
+            
+            <h1>Perfil</h1>
+            
+            <h3 style="justify-content: center;">Algunos de los servicios a brindar son...</h3>
+            
+            <div class="Imagenes">
+            <img src="Imagenes/OIP_2.jpg" alt="ARQUI"/>
+            <footer style="font-size: 13px;">Imagen de obra realizada</footer>
+            </br><!-- comment -->
+            <img src="Imagenes/OIP_3.jpg" alt="ARQUI"/>
+            <footer style="font-size: 13px;">Imagen de drones a servicio</footer>
+            </br><!-- comment -->
+            <img src="Imagenes/OIP_4.jpg" alt="ARQUI"/>
+            <footer style="font-size: 13px;">Imagen de consultoria</footer>
+            </br><!-- comment -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/USzDLDjh6NA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            </div>
+            
+            <p> Lorem ipsum dolor sit <strong>amet consectetur adipiscing elit rhoncus vestibulum vitae libero</strong> cras dictum mi, orci aliquam sed dis elementum rutrum gravida magna habitant blandit himenaeos mauris tempor. Suscipit dui porttitor mattis habitant tincidunt ligula mauris metus per quis, in justo augue curae purus posuere eu condimentum tortor, montes magnis aliquam dictumst duis aliquet volutpat proin diam. Morbi et ligula dignissim ornare dictumst sodales risus purus, a vitae vel leo etiam natoque penatibus venenatis, suscipit est malesuada arcu eleifend potenti cras. </p>
+       
+            <p> Inceptos fermentum et primis luctus dui leo, rutrum orci tortor nec mauris nullam, morbi class est donec accumsan. Diam libero vel ante nisi dis elementum, mauris velit egestas morbi pellentesque arcu ridiculus, duis fames cubilia luctus viverra. Leo senectus tempus aliquam fames sodales laoreet consequat vulputate, metus penatibus magna tristique sagittis platea. </p>
+        </div>
+    </body>
+</html>
