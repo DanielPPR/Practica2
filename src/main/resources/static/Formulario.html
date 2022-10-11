@@ -5,11 +5,159 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Formulario</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    <style>
+        .menu{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #252839;
+        }
+        ul{
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        ul li a{
+            position: relative;
+            font-size: 2em;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+        }
+        ul li a::before{
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid  var(--clr);
+            -webkit-text-stroke: 1px  var(clr);
+        }
+        ul li a:hover::before{
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(clr));
+        }
+        #barralateral{
+            position:absolute;
+            top:12%;
+            left:0;
+            height: 81%;
+            width: 20%;
+            padding: 10px;
+        }
+        .contenido{
+            position:absolute;
+            top:12%;
+            left:20%;
+            height: 81%;
+            width:80%;
+            padding: 10px;
+            overflow: auto;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+
+        }
+        input[type=button], input[type=submit], input[type=reset] {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
     <body>
-        <div>TODO write content</div>
+        <div>
+            <aside id="barralateral">
+                <nav class="menu">
+                    <ul>             
+                        <li style="--clr:#00ade1">
+                            <a href="Index.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+                        </li>
+                        <li style="--clr:#ff6493">
+                            <a href="Perfil.html" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a>
+                        </li>
+                        <li style="--clr:#ffdd1c">
+                            <a href="Servicios.html" data-text="&nbsp;Servicios">&nbsp;Servicios&nbsp;</a>
+                        </li>
+                        <li style="--clr:#00dc82">
+                            <a href="Equipo.html" data-text="&nbsp;Equipo">&nbsp;Equipo&nbsp;</a>
+                        </li>
+                        <li style="--clr:#dc00d4">
+                            <a href="Contacto.html" data-text="&nbsp;Contacto">&nbsp;Contacto&nbsp;</a>
+                        </li>
+                        <li style="--clr:#07FFD9">
+                            <a href="Formulario.html" data-text="&nbsp;Formulario">&nbsp;Formulario&nbsp;</a>
+                        </li>
+                        <li style="--clr:#4040FF">
+                            <a href="Videos.html" data-text="&nbsp;Videos">&nbsp;Videos&nbsp;</a>
+                        </li>
+                        <li style="--clr:#FF32E3">
+                            <a href="Blog.html" data-text="&nbsp;Blog">&nbsp;Blog&nbsp;</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </aside>
+
+        </div>
+        <div class="contenido">
+
+            <h1>Suscribase</h1>
+
+            <h3>Llene los espacios y usted sera suscrito de manera automatica al nuestro blog de noticias</h3>
+
+            <form>
+                <label for="fname">Nombre:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Apellidos:</label><br>
+                <input type="text" id="lname" name="lname">
+                </br>
+                <label for="email">Escriba su correo:</label><br>
+                <input type="email" id="email" name="email">
+                </br>
+                </br><!-- comment -->
+                <p>Seleccione su <i><strong>servicio</strong></i> a consultar</p>
+                </br>
+                  <input type="radio" id="html" name="fav_language" value="HTML">
+                  <label for="html">Consultoria</label><br>
+                  <input type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">Planos</label><br>
+                  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                  <label for="javascript">Presupuestos</label>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Submit">
+                </br>
+                </br>
+                </br>
+                </br>
+                </br><!-- comment -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20336.974025077736!2d-74.22347012785966!3d40.7376209395677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ab5f37220073%3A0xe9d9830841e6dc74!2sEast%20Orange%20VA%20Medical%20Center!5e0!3m2!1sen!2scr!4v1665519159854!5m2!1sen!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </form>
+
+
+        </div>
     </body>
 </html>

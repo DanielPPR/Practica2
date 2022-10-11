@@ -10,14 +10,83 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
-        * {
+        .menu{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #252839;
+        }
+        ul{
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        ul li a{
+            position: relative;
+            font-size: 2em;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+        }
+        ul li a::before{
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid  var(--clr);
+            -webkit-text-stroke: 1px  var(clr);
+        }
+        ul li a:hover::before{
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(clr));
+        }
+        #barralateral{
+    position:absolute;
+    top:12%;
+    left:0;
+    height: 81%;
+    width: 20%;
+    padding: 10px;
+}
+.contenido{
+     position:absolute;
+    top:12%;
+    left:20%;
+    height: 81%;
+    width:80%;
+    padding: 10px;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+   
+}
+Filass {
   box-sizing: border-box;
+  margin: 60px 60px;
+  padding-bottom: 40px;
 }
 
 .columna {
   float: left;
   width: 50%;
-  padding-right: 5px;
+  padding-right: 4px;
+  padding-left: 40px;
+  padding-bottom: 60px;
 }
 
 .fila::after {
@@ -25,22 +94,88 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
   clear: both;
   display: table;
 }
+.fab {
+padding: 10px 20px;
+font-size: 30px;
+width: 40px;
+text-align: center;
+
+text-decoration: none;
+margin: 80px 20px;
+border-radius: 20%;
+}
+
+.fab:hover {
+opacity: 0.7;
+}
+
+.fa-whatsapp {
+    background: #ffffff;
+color: black;
+}
     </style>
     <body>
-         <div class="fila">
+        <div>
+            <aside id="barralateral">
+                <nav class="menu">
+                    <ul>             
+                        <li style="--clr:#00ade1">
+                            <a href="Index.html" data-text="&nbsp;Inicio">&nbsp;Inicio&nbsp;</a>
+                        </li>
+                        <li style="--clr:#ff6493">
+                            <a href="Perfil.html" data-text="&nbsp;Perfil">&nbsp;Perfil&nbsp;</a>
+                        </li>
+                        <li style="--clr:#ffdd1c">
+                            <a href="Servicios.html" data-text="&nbsp;Servicios">&nbsp;Servicios&nbsp;</a>
+                        </li>
+                        <li style="--clr:#00dc82">
+                            <a href="Equipo.html" data-text="&nbsp;Equipo">&nbsp;Equipo&nbsp;</a>
+                        </li>
+                        <li style="--clr:#dc00d4">
+                            <a href="Contacto.html" data-text="&nbsp;Contacto">&nbsp;Contacto&nbsp;</a>
+                        </li>
+                        <li style="--clr:#07FFD9">
+                            <a href="Formulario.html" data-text="&nbsp;Formulario">&nbsp;Formulario&nbsp;</a>
+                        </li>
+                        <li style="--clr:#4040FF">
+                            <a href="Videos.html" data-text="&nbsp;Videos">&nbsp;Videos&nbsp;</a>
+                        </li>
+                        <li style="--clr:#FF32E3">
+                            <a href="Blog.html" data-text="&nbsp;Blog">&nbsp;Blog&nbsp;</a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </aside>
+
+        </div>
+         <div class="fila Filass">
         <div class="columna">
-            <img src="https://picsum.photos/800/600">
+            <img src="Imagenes/Persona.jpg" width="300px" height="250px" alt="Persona"/>
+            <h3 style="color: #ffffff">Arq. Jose Luis</h3>
+            <p style="color: #cccccc">Especialista en Analisis de planos constructivos</p>
+             <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank">Contactar</a>
         </div>
         <div class="columna">
-            <img src="https://picsum.photos/800/600">
+             <img src="Imagenes/Persona2.jpg" width="300px" height="250px" alt="Persona"/>
+              <h3 style="color: #ffffff">Arq. daniel Gonzales</h3>
+            <p style="color: #cccccc">Especialista en Planos Arquitectonicos</p>
+             <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank">Contactar</a>
         </div>
     </div>
-    <div class="fila">
+    <div class="fila Filass">
         <div class="columna">
-            <img src="https://picsum.photos/800/600">
+             <img src="Imagenes/Persona3.jpg" width="300px" height="250px" alt="Persona"/>
+              <h3 style="color: #ffffff">Ing. Mauricio Garcia</h3>
+            <p style="color: #cccccc">Ingeniero Civil de Obras</p>
+             <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank">Contactar</a>
         </div>
         <div class="columna">
-            <img src="https://picsum.photos/800/600">
+             <img src="Imagenes/Persona4.jpg" width="300px" height="250px" alt="Persona"/>
+              <h3 style="color: #ffffff">Ing. Mariela Vargas</h3>
+            <p style="color: #cccccc">Ingeniera topografa de obras</p>
+            <a class="fab fa-whatsapp" href="https://wa.me/34555005500/?text=tu%20texto%20personalizado" target="_blank">Contactar</a>
         </div>
     </div>
     </body>
